@@ -1,0 +1,130 @@
+.brand-slider {
+	& {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	> .brand-item {
+		position: relative;
+	}
+}
+
+@media screen and (min-width: @screen-media__xxs) {
+	.product-list {
+		// 5 brands
+		> input:nth-child(3):checked ~ .brand-slider {
+			width: @screen-media__xl;
+			overflow: visible;
+		}
+
+		> input:nth-child(3):checked ~ .brand-slider .brand-item:nth-child(1) {
+			animation: br5_step1_item1 2.5s linear, br5_step2_item1 12.5s linear 2.5s infinite;
+		}
+
+		> input:nth-child(3):checked ~ .brand-slider .brand-item:nth-child(2) {
+			animation: br5_step1_item2 5s linear, br5_step2_item2 12.5s linear 5s infinite;
+		}
+
+		> input:nth-child(3):checked ~ .brand-slider .brand-item:nth-child(3) {
+			animation: br5_step1_item3 7.5s linear, br5_step2_item3 12.5s linear 7.5s infinite;
+		}
+
+		> input:nth-child(3):checked ~ .brand-slider .brand-item:nth-child(4) {
+			animation: br5_step1_item4 10s linear, br5_step2_item4 12.5s linear 10s infinite;
+		}
+
+		> input:nth-child(3):checked ~ .brand-slider .brand-item:nth-child(5) {
+			animation: br5_step1_item5 12.5s linear, br5_step2_item5 12.5s linear 12.5s infinite;
+		}
+
+		// 4 brands
+
+		> input:nth-child(1):checked ~ .brand-slider,
+		> input:nth-child(5):checked ~ .brand-slider {
+			width: @screen-media__l;
+			overflow: visible;
+		}
+
+		> input:nth-child(1):checked ~ .brand-slider .brand-item:nth-child(1),
+		> input:nth-child(5):checked ~ .brand-slider .brand-item:nth-child(1)  {
+			animation: br4_step1_item1 2.5s linear, br4_step2_item1 10s linear 2.5s infinite;
+		}
+
+		> input:nth-child(1):checked ~ .brand-slider .brand-item:nth-child(2),
+		> input:nth-child(5):checked ~ .brand-slider .brand-item:nth-child(2)  {
+			animation: br4_step1_item2 5s linear, br4_step2_item2 10s linear 5s infinite;
+		}
+
+		> input:nth-child(1):checked ~ .brand-slider .brand-item:nth-child(3),
+		> input:nth-child(5):checked ~ .brand-slider .brand-item:nth-child(3)  {
+			animation: br4_step1_item3 7.5s linear, br4_step2_item3 10s linear 7.5s infinite;
+		}
+
+		> input:nth-child(1):checked ~ .brand-slider .brand-item:nth-child(4),
+		> input:nth-child(5):checked ~ .brand-slider .brand-item:nth-child(4)  {
+			animation: br4_step1_item4 10s linear, br4_step2_item4 10s linear 10s infinite;
+		}
+
+		// 2 brands
+
+		> input:nth-child(9):checked ~ .brand-slider,
+		> input:nth-child(13):checked ~ .brand-slider {
+			width: @screen-media__s;
+			overflow: visible;
+		}
+
+		> input:nth-child(9):checked ~ .brand-slider .brand-item:nth-child(1),
+		> input:nth-child(13):checked ~ .brand-slider .brand-item:nth-child(1)  {
+			animation: br2_step1_item1 2.5s linear, br2_step2_item1 5s linear 2.5s infinite;
+		}
+
+		> input:nth-child(9):checked ~ .brand-slider .brand-item:nth-child(2),
+		> input:nth-child(13):checked ~ .brand-slider .brand-item:nth-child(2)  {
+			animation: br2_step1_item2 5s linear, br2_step2_item2 5s linear 5s infinite;
+		}
+	}
+}
+
+@media screen and (min-width: (@screen-media__s + 1px)) {
+	.product-list {
+		> input:nth-child(9):checked ~ .brand-slider,
+		> input:nth-child(13):checked ~ .brand-slider {
+			width: 100%;
+		}
+
+		> input:nth-child(9):checked ~ .brand-slider .brand-item:nth-child(n+1),
+		> input:nth-child(13):checked ~ .brand-slider .brand-item:nth-child(n+1) {
+			animation: stop_animation 0s linear;
+		}
+	}
+}
+
+@media screen and (min-width: (@screen-media__l + 1px)) {
+	.product-list {
+		> input:nth-child(1):checked ~ .brand-slider,
+		> input:nth-child(5):checked ~ .brand-slider {
+			width: 100%;
+		}
+
+		> input:nth-child(1):checked ~ .brand-slider .brand-item:nth-child(n+1),
+		> input:nth-child(5):checked ~ .brand-slider .brand-item:nth-child(n+1) {
+			animation: stop_animation 0s linear;
+		}
+	}
+}
+
+@media screen and (min-width: (@screen-media__xl + 1px)) {
+	.product-list {
+		> input:nth-child(3):checked ~ .brand-slider {
+			width: 100%;
+		}
+
+		> input:nth-child(3):checked ~ .brand-slider .brand-item:nth-child(n+1) {
+			animation: stop_animation 0s linear;
+		}
+	}
+}

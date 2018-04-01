@@ -1,0 +1,30 @@
+{
+  "name": "satellittehno",
+  "version": "1.0.0",
+  "description": "In a feature this file will be upgrade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Exzorcist/satellittehno.local.git"
+  },
+  "author": "Ivan Karpovich & Andrey Saiko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Exzorcist/satellittehno.local/issues"
+  },
+  "homepage": "https://github.com/Exzorcist/satellittehno.local#readme",
+  "dependencies": {
+    "grunt": "^1.0.2"
+  },
+  "devDependencies": {
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
